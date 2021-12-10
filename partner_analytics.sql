@@ -5,8 +5,6 @@
 # *use Makefile
 
 CREATE DATABASE IF NOT EXISTS `partner_analytics`;
-
-
 CREATE EXTERNAL TABLE IF NOT EXISTS `partner_analytics.partners_migration` (
     `gym_id` integer COMMENT 'Old Core Gym Identifier.',
     `partner_id` string COMMENT 'Tagus Identifier.',
@@ -20,7 +18,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS `partner_analytics.partners_migration` (
     `country_code` string COMMENT 'Country ID is the identifier of a country that the Partner belongs to.',
     `state` string COMMENT 'From which state this partner is.',
     `city` string COMMENT 'From which city this partner is',
-    `number_of_validations_avg` decimal(12,2) COMMENT 'Average number of validations on this partner in the last 4 months.',
+    `number_of_validations_avg` decimal(12, 2) COMMENT 'Average number of validations on this partner in the last 4 months.',
     `number_of_validations_range` string COMMENT 'Ranges of the avarage number of validations on this partner in the last 4 months.',
     `last_contract_signed_at` timestamp COMMENT 'The last time that this partner received a contract on the old core.',
     `contract_files_count` integer COMMENT 'Number of files from last signed contract.',
@@ -117,7 +115,7 @@ TBLPROPERTIES (
 
 
 CREATE EXTERNAL TABLE `partner_analytics.gyms_image_rate`(
-  `image_rate` double COMMENT 'image rate', 
+  `image_rate` double COMMENT 'image rate',
   `gym_id` integer COMMENT 'gym_id',
   `created_at` timestamp COMMENT 'date when the image rating was created',
   `is_current_version` boolean COMMENT 'flag indicating if the image rating is the latest version'
@@ -136,9 +134,9 @@ TBLPROPERTIES (
 
 CREATE EXTERNAL TABLE `partner_analytics.flat_attendances`(
     `user_id` string COMMENT 'tagus user id',
-    `partner_id` string COMMENT 'tagus partner id', 
-    `product_id` string COMMENT 'tagus product id', 
-    `gympass_id` bigint COMMENT 'gympass id | person unique token', 
+    `partner_id` string COMMENT 'tagus partner id',
+    `product_id` string COMMENT 'tagus product id',
+    `gympass_id` bigint COMMENT 'gympass id | person unique token',
     `gym_product_id` integer COMMENT 'old core product id',
     `checkin_type` string COMMENT 'checkin type',
     `product_is_live_class` boolean COMMENT 'is live class',
@@ -146,7 +144,7 @@ CREATE EXTERNAL TABLE `partner_analytics.flat_attendances`(
     `plan_id` string COMMENT 'tagus plan id',
     `attendance_type` string COMMENT 'attendance type value',
     `is_attendance` boolean COMMENT 'attendance was validated',
-    `promise_attendance_id` bigint COMMENT 'promise attendance id', 
+    `promise_attendance_id` bigint COMMENT 'promise attendance id',
     `attendance_id` bigint COMMENT 'attendance id',
     `attendance_type_id` integer COMMENT 'attendance type id',
     `attendance_details_id` bigint COMMENT 'attendance details id',
