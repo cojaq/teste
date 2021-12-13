@@ -5,6 +5,7 @@
 # *use Makefile
 
 CREATE DATABASE IF NOT EXISTS `partner_analytics`;
+
 CREATE EXTERNAL TABLE IF NOT EXISTS `partner_analytics.partners_migration` (
     `gym_id` integer COMMENT 'Old Core Gym Identifier.',
     `partner_id` string COMMENT 'Tagus Identifier.',

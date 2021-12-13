@@ -1,8 +1,8 @@
 repos:
-#  - repo: https://github.com/psf/black
-#    rev: 21.12b0
-#    hooks:
-#      - id: black
+  - repo: https://github.com/psf/black
+    rev: 21.12b0
+    hooks:
+      - id: black
 #  - repo: https://github.com/PyCQA/isort
 #    rev: 5.10.1
 #    hooks:
@@ -15,13 +15,13 @@ repos:
 #    rev: 4.0.1
 #    hooks:
 #      - id: flake8
-   - repo: https://github.com/sqlfluff/sqlfluff
-     rev: 0.8.2
-     hooks:
-       - id: sqlfluff-lint
-         args: [--dialect=hive]
-       - id: sqlfluff-fix
-         args: [--dialect=hive]
+#   - repo: https://github.com/sqlfluff/sqlfluff
+#     rev: 0.8.2
+#     hooks:
+#       - id: sqlfluff-lint
+#         args: [--dialect=hive, --noqa, "PRS"]
+#       - id: sqlfluff-fix
+#         args: [--dialect=hive, --noqa, "PRS"]
          # Arbitrary arguments to show an example
          # args: [--rules, "L003,L014"]
          # additional_dependencies: ['.[dbt]']
